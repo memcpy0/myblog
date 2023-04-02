@@ -16,9 +16,10 @@ CREATE TABLE `blog_article` (
   
   `view_counts` int(11) DEFAULT NULL COMMENT '浏览数', 
   `comment_counts` int(11) DEFAULT NULL COMMENT '评论数',
+  `article_weight` int(11) DEFAULT NULL COMMENT '文章权重,比如置顶',
   `create_time` datetime NOT NULL COMMENT '创建时间',
   `update_time` datetime NOT NULL COMMENT '更新时间',
-  `is_deleted` bit(1) NOT NULL DEFAULT 0 COMMENT '是否删除,0表示不删除',
+  `is_deleted` int(1) NOT NULL DEFAULT 0 COMMENT '是否删除,0表示不删除',
    PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='文章管理';
 
